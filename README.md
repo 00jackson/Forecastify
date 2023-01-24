@@ -4,4 +4,4 @@ A weather app using RapidAPI
 
 the user has to install two vscode extensions before hand : RapidAPI - weatherAPI by ninjas , Live Server
 
-LIVE VIEW weather-today-production.up.railway.app
+
