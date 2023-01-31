@@ -1,15 +1,16 @@
-const options = {
-    method: 'GET',
-    headers: {
+const options = {  //creates a js object called 'options'
+    method: 'GET',   // that contains properties of HTTP GET request
+    headers: { //property of options that conatins the api key value pairs for the request headers
         'X-RapidAPI-Key': 'b45e96323fmshf5e4bc50d3b8a90p1e091djsnfb21cde4eb87',
         'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+        //these two header may be used  for authentication or routing purposes by the server you are amking request to.
     }
 };
-const getWeather = (city) => {
+const getWeather = (city) => { //js function called getWeather that takes in one parameter called city
     cityName.innerHTML = city
     fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
-        .then(response => response.json())
-        .then((response) => {
+        .then(response => response.json()) //method is used to handle the response from the server and parse the returned data as JSON.
+        .then((response) => { // Then the response data is logged in the console, and various properties of the response are rendered on the webpage by updating the innerHTML of different elements.
             console.log(response)
             //cloud_pct.innerHTML = response.cloud_pct
             temp.innerHTML = response.temp
@@ -25,12 +26,16 @@ const getWeather = (city) => {
             sunrise.innerHTML = response.sunrise
             sunset.innerHTML = response.sunset
         })
-        .catch(err => console.error(err));
+        .catch(err => console.error(err)); //method is used to handle any errors that may occur during the fetch request.
+
+        //If an error occurs, it logs the error message to the console.
 }
 
-submit.addEventListener("click", (e) => {
-    e.preventDefault()
-    getWeather(city.value)
+submit.addEventListener("click", (e) => { //the submit button, which listens for a click event
+    e.preventDefault()     // method is used to prevent the default behavior of the submit button, which is typically to refresh the page.
+    getWeather(city.value) 
+      //The function then calls the getWeather() function passing in the value of the city element as an argument.
+
 })
 
 getWeather("Boston")
