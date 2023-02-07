@@ -1,7 +1,7 @@
 # Weather-Today
 
 _A weather app using RapidAPI_
-A app that displays the fetched live weather of any defined cities across the world. The displayed weather may not be accurate but its quite approximately correct.
+A web app that displays the fetched live weather of any defined cities across the world. The displayed weather may not be accurate but its quite approximately correct.
 
 [live View](https://weather-today-production.up.railway.app/)
 
