@@ -3,7 +3,7 @@
 _A weather app using RapidAPI_
 A web app that displays the fetched live weather of any defined cities across the world. The displayed weather may not be accurate but its quite approximately correct.
 
-[live View](https://weather-today-production.up.railway.app/)
+
 
 # Pre-Requisite
 * RapidAPI - weatherAPI by ninjas
